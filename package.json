@@ -14,10 +14,12 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "14.17.5"
+  },
   "bugs": {
     "url": "https://github.com/coding-boot-camp/unit18hw/issues"
   },
-  "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",
