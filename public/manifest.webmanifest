@@ -1,0 +1,20 @@
+{
+  "name": "Budget-App PWA",
+  "short_name": "Budget-App",
+  "start_url": ".",
+  "background_color": "#cadbda",
+  "theme_color": "#cadbda",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "/icons/icon-192x192.png",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "/icons/icon-512x512.png",
+      "type": "image/png"
+    }
+  ]
+}
