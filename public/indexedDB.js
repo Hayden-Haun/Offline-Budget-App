@@ -1,12 +1,13 @@
 let db;
+
 const request = indexedDB.open("budgetTracker", 1);
 
 request.onupgradeneeded = function (event) {
   const updatedDB = event.target.result;
-  updatedDB.createObjectStore("pending", { autoincrement: true });
+  updatedDB.createObjectStore("pending", { autoIncrement: true });
 };
 
-request.onsucccess = function (event) {
+request.onsuccess = function (event) {
   db = event.target.result;
 
   if (navigator.online) {
@@ -18,11 +19,8 @@ request.onerror = function (event) {
   console.log("Error: " + event.target.errorCode);
 };
 
-//This is called in index.js in the CATCH of the POST request.
+//Is called in index.js when the POST to /api/transaction fails
 function saveRecord(data) {
-  console.log("this is working");
-  console.log(data);
-
   const transaction = db.transaction(["pending"], "readwrite");
   const pendingStore = transaction.objectStore("pending");
 
