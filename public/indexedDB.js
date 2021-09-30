@@ -1,6 +1,6 @@
 let db;
 
-const request = indexedDB.open("budgetTracker", 1);
+const request = window.indexedDB.open("budgetTracker", 1);
 
 request.onupgradeneeded = function (event) {
   const updatedDB = event.target.result;
@@ -9,6 +9,8 @@ request.onupgradeneeded = function (event) {
 
 request.onsuccess = function (event) {
   db = event.target.result;
+
+  console.log(db);
 
   if (navigator.online) {
     updateDatabase();
@@ -58,4 +60,4 @@ function updateDatabase() {
   };
 }
 
-window.addEventListener("online", updateDatabase());
+window.addEventListener("online", updateDatabase);
