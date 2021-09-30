@@ -1,6 +1,6 @@
 # Offline Budget App
 
-LIVE URL: https://tech-blog-hh.herokuapp.com/
+LIVE URL: https://offline-budget-app-hh.herokuapp.com/
 
 REPOSITORY: https://github.com/Hayden-Haun/Offline-Budget-App
 
